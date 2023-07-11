@@ -71,3 +71,7 @@ section.section-form form {
 .navbar {
     width: 100%;
 }
+
+.route-link {
+    text-align: center;
+}

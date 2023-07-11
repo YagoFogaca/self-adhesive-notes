@@ -42,7 +42,7 @@
                 <label for="passwordCheck" class="form-label">Confirme sua senha</label>
                 <input type="password" class="form-control" id="passwordCheck" placeholder="Confirme sua senha">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 route-link">
                 <span>Já possui conta? <a href={{ route('login') }}>Clique aqui</a></span>
             </div>
             <div class="d-grid gap-2">
