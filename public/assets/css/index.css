@@ -63,3 +63,7 @@ section.section-form {
 section.section-form form {
     width: 90%;
 }
+
+.invalid-feedback {
+    display: block;
+}
