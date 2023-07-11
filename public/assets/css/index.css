@@ -67,3 +67,7 @@ section.section-form form {
 .invalid-feedback {
     display: block;
 }
+
+.navbar {
+    width: 100%;
+}
