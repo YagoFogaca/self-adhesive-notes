@@ -6,6 +6,7 @@ use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -17,12 +18,19 @@ class UserController extends Controller
     public function createAccount(Request $req)
     {
         try {
-            $userValidated = $req->validate([
+            $req->validate([
                 'username' => 'required|min:4',
                 'email' => 'required|email',
                 'password' => 'required|min:8',
             ]);
-            User::create($userValidated);
+
+            $user = [
+                'username' => $req->input('username'),
+                'email' => $req->input('email'),
+                'password' => Hash::make($req->input('password')),
+            ];
+
+            User::create($user);
             return redirect()->route('login')->with('success', 'Conta criada com sucesso');
         } catch (Exception $error) {
             return redirect()->back()->with('error', 'Ocorreu um erro ao criar o usaurio');
@@ -36,11 +44,13 @@ class UserController extends Controller
 
     public function store(Request $req)
     {
-        $user = $req->validate([
+        $req->validate([
             'email' => 'required|email',
             'password' => 'required|min:8'
         ]);
-        $auth =  Auth::attempt($user);
+        $user = $req->only('email', 'password');
+
+        $auth = Auth::attempt($user);
         if (!$auth) {
             return redirect()->route('login')->withErrors(['errorAuth' => 'Email ou senha inválidos']);
         }
