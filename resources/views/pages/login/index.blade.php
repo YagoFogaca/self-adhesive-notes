@@ -19,6 +19,9 @@
                 <label for="password" class="form-label">Senha</label>
                 <input type="password" name="password" class="form-control" id="password" placeholder="Sua senha">
             </div>
+            <div class="mb-3">
+                <span>Não possui conta? <a href={{ route('create') }}>Clique aqui</a></span>
+            </div>
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" type="submit">Login</button>
             </div>
