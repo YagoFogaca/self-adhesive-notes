@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -22,9 +23,28 @@ class UserController extends Controller
                 'password' => 'required|min:8',
             ]);
             User::create($userValidated);
-            redirect('login')->with('success', 'Conta criada com sucesso');
+            return redirect()->route('login')->with('success', 'Conta criada com sucesso');
         } catch (Exception $error) {
             return redirect()->back()->with('error', 'Ocorreu um erro ao criar o usaurio');
         }
+    }
+
+    public function login()
+    {
+        return view('pages.login.index');
+    }
+
+    public function store(Request $req)
+    {
+        $user = $req->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:8'
+        ]);
+        $auth =  Auth::attempt($user);
+        if (!$auth) {
+            return redirect()->route('login')->withErrors(['errorAuth' => 'Email ou senha inválidos']);
+        }
+
+        return redirect()->route('app');
     }
 }

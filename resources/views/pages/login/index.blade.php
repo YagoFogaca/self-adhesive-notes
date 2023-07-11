@@ -4,17 +4,23 @@
     @extends('components.card-form.index')
 @section('form')
     <section class="section-form">
-        <form action="" method="POST">
+        <form action={{ route('store') }} method="POST">
+            @csrf
+            @error('errorAuth')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Seu Email">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Seu Email">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Sua senha">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Sua senha">
             </div>
             <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button">Login</button>
+                <button class="btn btn-primary" type="submit">Login</button>
             </div>
         </form>
     </section>
