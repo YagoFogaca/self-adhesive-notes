@@ -5,7 +5,7 @@ use App\Http\Controllers\PlatformController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(UserController::class)->group(function () {
-  Route::get('/', 'index');
+  Route::get('/', 'index')->name('create');
   Route::post('/', 'createAccount')->name('createAccount');
   Route::get('/login', 'login')->name('login');
   Route::post('/login', 'store')->name('store');
