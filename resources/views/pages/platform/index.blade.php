@@ -5,4 +5,6 @@
     <section class="container-notes">
         @include('components.card-note.index')
     </section>
+
+    @include('components.modal.index')
 @endsection
