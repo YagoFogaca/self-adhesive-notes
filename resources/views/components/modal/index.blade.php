@@ -1,7 +1,7 @@
 <section class="container-modal">
     <section class="container-form--create">
         <div class="close-modal">
-            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark btn-closeModal"></i>
         </div>
         <form action="" method="POST">
             @csrf

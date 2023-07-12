@@ -11,7 +11,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Criar</a>
+                    <button class="nav-link btn-open" type="button">Criar</button>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sair</a>
