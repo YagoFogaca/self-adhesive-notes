@@ -33,7 +33,7 @@ class UserController extends Controller
             User::create($user);
             return redirect()->route('login')->with('success', 'Conta criada com sucesso');
         } catch (Exception $error) {
-            return redirect()->back()->with('error', 'Ocorreu um erro ao criar o usaurio');
+            return redirect()->back()->withErrors(['error', 'Ocorreu um erro ao criar o usaurio']);
         }
     }
 

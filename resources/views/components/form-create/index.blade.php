@@ -2,13 +2,13 @@
 
 @section('form')
     <section class="section-form">
-        @if (session()->has('error'))
-            <div class="invalid-feedback">
-                {{ session()->get('error') }}
-            </div>
-        @endif
         <form action={{ route('createAccount') }} method="POST">
             @csrf
+            @error('errorAuth')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
             <div class="mb-3">
                 <label for="username" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="Seu nome">
