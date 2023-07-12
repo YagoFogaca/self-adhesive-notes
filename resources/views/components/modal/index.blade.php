@@ -11,10 +11,53 @@
             </div>
             <div class="mb-3">
                 <label for="text" class="form-label">Nota</label>
-                <input type="text" class="form-control" id="text" name="text" placeholder="Sua nota">
+                <textarea class="form-control" id="text" name="text" rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label for="passwordCheck" class="form-label">Escolha a cor da nota</label>
+                <div class="colors">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="color" id="color-1" value="6527BE">
+                        <label class="form-check-label" for="color-1">
+                            <div class="color-note" style="background-color: #6527BE;"></div>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="color" id="color-2" value="068FFF">
+                        <label class="form-check-label" for="color-2">
+                            <div class="color-note" style="background-color: #068FFF;"></div>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="color" id="color-3" value="ff4500">
+                        <label class="form-check-label" for="color-3">
+                            <div class="color-note" style="background-color: #ff4500;"></div>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="color" id="color-4" value="16FF00">
+                        <label class="form-check-label" for="color-4">
+                            <div class="color-note" style="background-color: #16FF00;"></div>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="color" id="color-5" value="option2">
+                        <label class="form-check-label" for="color-5">
+                            <div class="color-note" style="background-color: #FFED00;"></div>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="color" id="color-6" value="option2">
+                        <label class="form-check-label" for="color-6">
+                            <div class="color-note" style="background-color: #F90716;"></div>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" type="submit">Criar nota</button>
