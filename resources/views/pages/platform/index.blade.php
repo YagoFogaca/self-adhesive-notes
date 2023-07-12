@@ -2,4 +2,7 @@
 
 @section('content')
     <x-nav></x-nav>
+    <section class="container-notes">
+        @include('components.card-note.index')
+    </section>
 @endsection

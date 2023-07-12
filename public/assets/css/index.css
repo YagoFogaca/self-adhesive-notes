@@ -6,9 +6,6 @@
 
 body {
     background-color: #e3e2e2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 section.card-form {
@@ -74,4 +71,49 @@ section.section-form form {
 
 .route-link {
     text-align: center;
+}
+
+.container-notes {
+    min-height: calc(100vh - 70px);
+    margin: 14px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-note {
+    width: 35%;
+    max-width: 395px;
+    min-width: 250px;
+    background-color: #ffffff;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.card-note--color {
+    width: 100%;
+    background-color: orangered;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-note--infos {
+    padding: 5px;
+}
+
+.card-note--infos-titulo {
+    font-size: 32px;
+}
+
+.card-note--infos-note {
+    font-size: 17px;
+}
+
+.dropdown-item .fa-solid {
+    margin-right: 15px;
 }
