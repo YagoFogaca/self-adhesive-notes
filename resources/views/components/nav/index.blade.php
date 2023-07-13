@@ -16,7 +16,7 @@
             </form>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <button class="nav-link active btn-open" type="button">Criar</button>
+                    <button class="nav-link active btn-open-modal-create" type="button">Criar</button>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={{ route('logout') }}>Sair</a>

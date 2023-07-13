@@ -1,6 +1,6 @@
-const modal = document.querySelector(".container-modal");
-const btnOpenModal = document.querySelector(".btn-open");
-const btnCloseModal = document.querySelector(".btn-closeModal");
+const modal = document.querySelector(".modal-create");
+const btnOpenModal = document.querySelector(".btn-open-modal-create");
+const btnCloseModal = document.querySelector(".btn-close-modal-create");
 
 btnOpenModal.addEventListener("click", () => {
     modal.style.display = "flex";

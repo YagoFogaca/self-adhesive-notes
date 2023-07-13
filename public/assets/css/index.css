@@ -148,7 +148,7 @@ section.section-form form {
     justify-content: center;
 }
 
-.container-form--create {
+.container-form--modal {
     width: 85%;
     padding: 25px;
     background-color: #ffffff;

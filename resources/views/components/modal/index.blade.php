@@ -1,7 +1,7 @@
-<section class="container-modal">
-    <section class="container-form--create">
+<section class="container-modal modal-create">
+    <section class="container-form--modal">
         <div class="close-modal">
-            <i class="fa-solid fa-xmark btn-closeModal"></i>
+            <i class="fa-solid fa-xmark btn-close-modal-create"></i>
         </div>
         <form action={{ route('note.store') }} method="POST">
             @csrf
