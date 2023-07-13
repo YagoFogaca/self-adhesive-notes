@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg" style="background-color: #A076F9;">
     <div class="container-fluid">
         <a class="navbar-brand" href={{ route('app') }}>
             <img src={{ asset('./assets/imgs/logo.png') }} style="width: 40px;" alt="Logo">
@@ -11,7 +11,7 @@
             <form class="d-flex" role="search" style="align-items: center;">
                 <input class="form-control me-2" type="text" id="input-search" placeholder="Pesquisar"
                     aria-label="Search">
-                <button class="btn btn-outline-success" id="btn-search" type="button">Buscar</button>
+                <button class="btn btn-dark" id="btn-search" type="button">Buscar</button>
                 <button class="btn btn-close" style="margin-left: 20px;" id="btn-close-search" type="button"></button>
             </form>
             <ul class="navbar-nav mb-2 mb-lg-0">
