@@ -9,6 +9,7 @@ Route::controller(UserController::class)->group(function () {
   Route::post('/', 'createAccount')->name('createAccount');
   Route::get('/login', 'login')->name('login');
   Route::post('/login', 'store')->name('store');
+  Route::get('/logout', 'logout')->name('logout');
 });
 
 Route::controller(PlatformController::class)->group(function () {

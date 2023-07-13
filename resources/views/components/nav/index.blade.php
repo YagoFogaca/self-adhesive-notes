@@ -14,7 +14,7 @@
                     <button class="nav-link btn-open" type="button">Criar</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sair</a>
+                    <a class="nav-link" href={{ route('logout') }}>Sair</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
