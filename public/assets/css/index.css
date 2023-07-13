@@ -96,6 +96,7 @@ section.section-form form {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 25px;
 }
 
 .card-note {
@@ -195,4 +196,10 @@ div.form-check {
 
 .form-check .form-check-input {
     margin-left: 0;
+}
+
+@media (max-width: 545px) {
+    .container-notes {
+        justify-content: center;
+    }
 }
