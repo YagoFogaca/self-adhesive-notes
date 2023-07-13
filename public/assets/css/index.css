@@ -14,6 +14,15 @@ body {
     justify-content: space-between;
 }
 
+#btn-close-search {
+    margin-left: 20px;
+    display: none;
+}
+
+button#btn-close-search:focus {
+    box-shadow: none;
+}
+
 section.card-form {
     width: 90%;
     max-width: 1326px;

@@ -8,9 +8,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                <button class="btn btn-outline-success" type="button">Buscar</button>
+            <form class="d-flex" role="search" style="align-items: center;">
+                <input class="form-control me-2" type="text" id="input-search" placeholder="Pesquisar"
+                    aria-label="Search">
+                <button class="btn btn-outline-success" id="btn-search" type="button">Buscar</button>
+                <button class="btn btn-close" style="margin-left: 20px;" id="btn-close-search" type="button"></button>
             </form>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">

@@ -10,4 +10,6 @@
     </section>
 
     @include('components.modal.index')
+
+    <script src={{ asset('assets/js/search.js') }}></script>
 @endsection
