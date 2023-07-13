@@ -2,8 +2,11 @@
 
 @section('content')
     <x-nav></x-nav>
+
     <section class="container-notes">
-        @include('components.card-note.index')
+        @foreach ($data as $note)
+            @include('components.card-note.index', ['note' => $note])
+        @endforeach
     </section>
 
     @include('components.modal.index')

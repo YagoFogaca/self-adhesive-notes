@@ -51,14 +51,14 @@
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="color" id="color-5" value="option2">
+                        <input class="form-check-input" type="radio" name="color" id="color-5" value="FFED00">
                         <label class="form-check-label" for="color-5">
                             <div class="color-note" style="background-color: #FFED00;"></div>
                         </label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="color" id="color-6" value="option2">
+                        <input class="form-check-input" type="radio" name="color" id="color-6" value="F90716">
                         <label class="form-check-label" for="color-6">
                             <div class="color-note" style="background-color: #F90716;"></div>
                         </label>

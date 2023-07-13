@@ -80,6 +80,7 @@ section.section-form form {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .card-note {
@@ -93,7 +94,6 @@ section.section-form form {
 
 .card-note--color {
     width: 100%;
-    background-color: orangered;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     padding: 5px;

@@ -1,5 +1,5 @@
 <article class="card-note">
-    <div class="card-note--color">
+    <div class="card-note--color" style="background-color: #{{ $note['color'] }};">
         <div class="card-note--config">
             <div class="btn-group" role="group">
                 <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -13,10 +13,7 @@
         </div>
     </div>
     <div class="card-note--infos">
-        <h3 class="card-note--infos-titulo">Titulo</h3>
-        <p class="card-note--infos-note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            laudantiumdebitis excepturi quibusdam sint. Esse repellat, vitae alias suscipit odio modi aliquid
-            consectetur
-            labore saepe, voluptatibus ad excepturi, quibusdam sequi?</p>
+        <h3 class="card-note--infos-titulo">{{ $note['title'] }}</h3>
+        <p class="card-note--infos-note">{{ $note['text'] }}</p>
     </div>
 </article>

@@ -12,7 +12,7 @@ class PlatformController extends Controller
 {
     public function index()
     {
-        $notes = User::find(Auth::id())->notes;
+        $notes = User::find(Auth::id())->notes->toArray();
         return view('pages.platform.index', ['data' => $notes]);
     }
 
