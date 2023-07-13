@@ -3,8 +3,9 @@
         <div class="close-modal">
             <i class="fa-solid fa-xmark btn-close-modal-edit"></i>
         </div>
-        <form action={{ route('note.store') }} method="POST">
+        <form action={{ route('note.update', ['id' => $note['id']]) }} method="POST">
             @csrf
+            @method('PUT')
             @error('error')
                 <div class="invalid-feedback">
                     {{ $message }}

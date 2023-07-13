@@ -44,4 +44,17 @@ class PlatformController extends Controller
         Note::find($id)->delete();
         return redirect()->back();
     }
+
+    public function update(Request $req, string $id)
+    {
+        $note = $req->validate([
+            'title' => 'required',
+            'text' => 'required|max:150',
+            'color' => 'required'
+        ]);
+        $noteUpdated = Note::find($id);
+        $noteUpdated->update($note);
+
+        return redirect()->route('app');
+    }
 }
