@@ -17,6 +17,7 @@ btnSearch.addEventListener("click", () => {
 });
 
 btnCloseSearch.addEventListener("click", () => {
+    btnCloseSearch.style.display = "none";
     search.value = "";
     cards.forEach((card) => {
         if (card.style.display.includes("none")) {
