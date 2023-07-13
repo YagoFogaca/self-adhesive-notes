@@ -3,7 +3,7 @@
         <div class="close-modal">
             <i class="fa-solid fa-xmark btn-closeModal"></i>
         </div>
-        <form action={{ route('store') }} method="POST">
+        <form action={{ route('note.store') }} method="POST">
             @csrf
             @error('error')
                 <div class="invalid-feedback">
