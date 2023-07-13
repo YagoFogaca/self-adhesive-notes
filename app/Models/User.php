@@ -17,4 +17,9 @@ class User extends Authenticatable
         'password',
         'username',
     ];
+
+    public function notes()
+    {
+        return $this->hasMany(Note::class);
+    }
 }
