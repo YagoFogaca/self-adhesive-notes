@@ -38,4 +38,10 @@ class PlatformController extends Controller
             return redirect()->back()->withErrors(['error' => 'Ocorreu um erro ao criar a nota']);
         }
     }
+
+    public function delete(string $id)
+    {
+        Note::find($id)->delete();
+        return redirect()->back();
+    }
 }
