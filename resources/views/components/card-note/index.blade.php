@@ -6,7 +6,8 @@
                     <i class="fa-solid fa-gear"></i>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen"></i>Editar</a></li>
+                    <li><button type="button" class="btn-open-modal-edit dropdown-item"><i
+                                class="fa-solid fa-pen"></i>Editar</button></li>
                     <li><a class="dropdown-item" href={{ route('note.delete', ['id' => $note['id']]) }}><i
                                 class="fa-solid fa-trash"></i>Apagar</a></li>
                 </ul>

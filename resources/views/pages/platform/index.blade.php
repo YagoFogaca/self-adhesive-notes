@@ -6,6 +6,7 @@
     <section class="container-notes">
         @foreach ($data as $note)
             @include('components.card-note.index', ['note' => $note])
+            @include('components.modal-edit.index', ['note' => $note])
         @endforeach
     </section>
 
