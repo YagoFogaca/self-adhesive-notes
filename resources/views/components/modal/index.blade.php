@@ -3,21 +3,27 @@
         <div class="close-modal">
             <i class="fa-solid fa-xmark btn-closeModal"></i>
         </div>
-        <form action="" method="POST">
+        <form action={{ route('store') }} method="POST">
             @csrf
+            @error('error')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
             <div class="mb-3">
                 <label for="title" class="form-label">Titulo</label>
-                <input type="text" class="form-control" id="title" name="title" value="Titulo 1">
+                <input required type="text" class="form-control" id="title" name="title" value="Titulo 1">
             </div>
             <div class="mb-3">
                 <label for="text" class="form-label">Nota</label>
-                <textarea class="form-control" id="text" name="text" rows="3"></textarea>
+                <textarea required class="form-control" id="text" name="text" rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label for="passwordCheck" class="form-label">Escolha a cor da nota</label>
                 <div class="colors">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="color" id="color-1" value="6527BE">
+                        <input checked class="form-check-input" type="radio" name="color" id="color-1"
+                            value="6527BE">
                         <label class="form-check-label" for="color-1">
                             <div class="color-note" style="background-color: #6527BE;"></div>
                         </label>

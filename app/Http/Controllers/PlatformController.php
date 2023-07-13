@@ -2,12 +2,40 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Note;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Exception;
 
 class PlatformController extends Controller
 {
     public function index()
     {
-        return view('pages.platform.index');
+        $notes = User::find(Auth::id())->notes;
+        return view('pages.platform.index', ['data' => $notes]);
+    }
+
+    public function store(Request $req)
+    {
+        try {
+            $req->validate([
+                'title' => 'required',
+                'text' => 'required|max:150',
+                'color' => 'required'
+            ]);
+            $note = [
+                'user_id' => Auth::id(),
+                'title' => $req->input('title'),
+                'text' => $req->input('text'),
+                'color' => $req->input('color'),
+
+            ];
+            Note::create($note);
+            return redirect()->route('app');
+        } catch (Exception $error) {
+            echo $error->getMessage();
+            return redirect()->back()->withErrors(['error' => 'Ocorreu um erro ao criar a nota']);
+        }
     }
 }

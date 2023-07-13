@@ -13,4 +13,5 @@ Route::controller(UserController::class)->group(function () {
 
 Route::controller(PlatformController::class)->group(function () {
   Route::get('/platform', 'index')->middleware('auth')->name('app');
+  Route::post('/notes/store', 'store')->middleware('auth')->name('store');
 });
